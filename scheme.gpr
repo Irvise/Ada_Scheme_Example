@@ -23,6 +23,10 @@ project Scheme is
    -- otherwise it should "just work".
    -- The string in Library_Interface is the name of the exported
    -- module/package.
+   --
+   -- More information in:
+   -- https://docs.adacore.com/gnat_ugn-docs/html/gnat_ugn/gnat_ugn/
+   -- the_gnat_compilation_model.html#stand-alone-ada-libraries
    for Library_Interface use ("Scheme_Test");
    
    -- This line is added to prevent other libraries from hitting each other.
