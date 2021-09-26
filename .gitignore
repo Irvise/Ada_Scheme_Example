@@ -1,0 +1,14 @@
+# Hide compilation files
+*.so
+*.ali
+*.o
+*.lexch
+*.bexch
+
+# Hide helper files
+*.stderr
+*.stdout
+b__*
+
+# Hide temporary files
+*~

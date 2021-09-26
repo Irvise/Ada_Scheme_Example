@@ -1,0 +1,33 @@
+project Scheme is
+
+   for Languages use ("ada");
+   
+   package Builder is	
+      -- Add default compiler flags. They are basic and simple to aid in debugging.
+      for Global_Compilation_Switches ("Ada") use ("-fPIC", "-ggdb", "-O1", "-gnata");
+   end Builder;
+
+   for Source_Dirs use ("src");
+   for Object_Dir use "obj";
+
+   for Library_Name use "scheme_hello";
+   for Library_Dir use "lib";
+   for Library_Kind use "Dynamic";
+   
+   -- This line is required to generate a SAL (Stand Alone Library)
+   -- A SAL library is required in order to have "ada"init and "ada"final
+   -- This procedures setup the library "runtime"
+   -- Their real name is ${Library_Name}{init,final}. In this case
+   -- scheme_helloinit and scheme_hellofinal.
+   -- They need to be called explicitly if you use some Real_Time functions,
+   -- otherwise it should "just work".
+   -- The string in Library_Interface is the name of the exported
+   -- module/package.
+   for Library_Interface use ("Scheme_Test");
+   
+   -- This line is added to prevent other libraries from hitting each other.
+   -- Each library is self contained. Allowing the calling program to have
+   -- several Ada libraries open.
+   for Library_Standalone use "encapsulated";
+   
+end Scheme;
