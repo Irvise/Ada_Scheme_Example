@@ -1,4 +1,4 @@
-# Ada_Scheme example
+# Ada - Scheme example
 
 An example application of Scheme calling into Ada, and Ada calling back to Scheme.
 
