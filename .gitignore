@@ -5,6 +5,9 @@
 *.lexch
 *.bexch
 
+# Hide executable
+scheme_ada
+
 # Hide helper files
 *.stderr
 *.stdout
