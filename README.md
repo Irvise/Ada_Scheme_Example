@@ -33,4 +33,4 @@ The Ada code contains a procedure called `hello_ada` which is exported as a `C` 
 
 I would like to thank the `#chicken` community for dealing with my questions and mistakes. Specially jjhoo.
 
-I would also like to thank the `#ada` community and specially onox, who found the missing link.
+I would also like to thank the `#ada` community and specially [onox](https://github.com/onox/), who found the missing link.
